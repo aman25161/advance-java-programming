@@ -1,4 +1,13 @@
 package lambdaExpression;
+class Voter{
+    public void checkVoter(int age){
+        if(age>=18){
+            System.out.println("You can vote");
+        }else{
+            System.out.println("You cannot vote");
+        }
+    }
+}
 @FunctionalInterface
 interface Calc{
     //void calculate(int n1, int n2);
@@ -16,5 +25,8 @@ public class MainFunctionalInterface {
             }
         };
         a.calculate(30);
+        Voter v = new Voter();
+        Calc b=v::checkVoter;
+        b.calculate(15);
     }
 }
