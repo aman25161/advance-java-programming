@@ -12,6 +12,16 @@ class Employee{
         this.salary = salary;
         this.dept = dept;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "eid=" + eid +
+                ", name='" + name + '\'' +
+                ", salary=" + salary +
+                ", dept='" + dept + '\'' +
+                '}';
+    }
 }
 public class practiceSorted {
     public static void main(String[] args){
@@ -41,6 +51,7 @@ public class practiceSorted {
         employeeList.add(new Employee(1,"Rahul",20000,"IT"));
         employeeList.add(new Employee(2,"Ayush",40000,"Testing"));
         employeeList.add(new Employee(3,"Akshilesh",30000,"Developer"));
-        List<Employee> elist=employeeList.stream().sorted().toList();
+        List<Employee> elist=employeeList.stream().sorted((e1,e2)->e1.salary- e2.salary).toList();
+        System.out.println(elist);
     }
 }
