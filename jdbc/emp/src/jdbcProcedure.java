@@ -14,7 +14,7 @@ public class jdbcProcedure {
         String driver_name = "com.mysql.cj.jdbc.Driver";
         String host = "jdbc:mysql://localhost:3306/employeeDB";
         String username = "root";
-        String pwd = "anmol2004";
+        String pwd = "mysql";
 
         Savepoint sp1 = null, sp2=null;
         Connection con = null;
